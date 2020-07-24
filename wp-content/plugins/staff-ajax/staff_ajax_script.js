@@ -1,10 +1,13 @@
 function load_all_staff(currentPage){
 	//var ajaxurl = '/wp-admin/admin-ajax.php';
+
+	//data
 	var postData = {
 		page: currentPage,
 		search: jQuery('#key-word').val(),
 		department: jQuery('#dept').val()
 	};
+
 	jQuery.ajax({
 		type: "post",
 		url: staffAjax.ajaxurl,
@@ -26,21 +29,28 @@ function load_all_staff(currentPage){
 	});
 }
 jQuery(function() {
+
+	//ini run
+	load_all_staff(1);
+
+	//get next page number
 	jQuery('.staff-lists').on("click", "div.staff-pagination a.nextButton", function(){
 		jQuery("html, body").animate({ scrollTop: 0 }, 500);
 		load_all_staff(jQuery(this).data('page'));
 	});
 	
+	//get prev page number
 	jQuery('.staff-lists').on("click", "div.staff-pagination a.prevButton", function(){
 		jQuery("html, body").animate({ scrollTop: 0 }, 500);
 		load_all_staff(jQuery(this).data('page'));
 	});
 	
-	load_all_staff(1);
+	//when search word do ajax call
 	jQuery("#key-word").keyup(function (e) {
 		load_all_staff(1);
 	});
 	
+	//when do filter do ajax call
 	jQuery("#dept").change(function () {
 		load_all_staff(1);
 	});
