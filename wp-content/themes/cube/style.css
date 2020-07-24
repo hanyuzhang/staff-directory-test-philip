@@ -1,0 +1,265 @@
+/*
+Theme Name: Cube
+Theme URI: http://cubemedia.nz
+Author: Hanyu Zhang
+Description: Theme For Cube Media Company
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+html, body{
+	font-family: 'Lato', sans-serif;
+	background-color: #fff;
+}
+body{
+	margin: 0 auto;
+}
+img{
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+h1{
+	font-size: 40px;
+	text-align: center;
+	line-height: 50px;
+	color: #000;
+}
+h2{
+	font-size: 30px;
+	line-height: 40px;
+	color: #000;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+h4{
+	font-size: 22px;
+	line-height: 30px;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	color: #000;
+}
+p{
+	font-size: 18px;
+	line-height: 28px;
+	color: #000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.logo-text h1{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.logo-text{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+#page{
+	display: block;
+	max-width: 1130px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #FAFAFA;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+.page-container{
+	max-width: 960px;
+    margin: 0 auto;
+    display: block;
+}
+.directory-search{
+	position: relative;
+	margin-bottom: 40px;    
+	display: table;
+    width: 100%;
+}
+.fa-search{
+	position: absolute;
+    left: 15px;
+	top: 10px;
+	font-size: 20px;
+	color: #cdcdcd;
+}
+.directory-search-left{
+	width: 75%;
+	float: left;
+	box-sizing: border-box;
+	display: block;
+}
+.directory-search-right{
+	width: 25%;
+	float: left;
+	display: block;
+	background-color: white;
+	box-sizing: border-box;
+}
+#key-word{
+	border: 1px solid #cdcdcd;
+	border-radius: 25px;
+	float: left;
+	font-size: 25px;
+	padding: 4px 0px 4px 40px;
+	max-width: 500px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.dept{
+	border: 1px solid #cdcdcd;
+	border-radius: 0px;
+	height: 40px;
+	width: 100%;
+}
+.nice-select.dept .list{
+	width: 100%;
+}
+.staff-img{
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 150px;
+	width: 150px;
+	float: left;
+}
+.staff-info{
+	width: calc(100% - 200px);
+	float: left;
+	padding-left: 50px;
+}
+.staff{
+	padding-bottom: 35px;
+	padding-top: 35px;
+	border-bottom: 1px solid #CCC;
+	display: none;
+}
+.staff-info p:last-child{
+	margin-bottom: 0px;
+}
+.staff-lists-outter{
+	position: relative;	
+}
+.staff-lists{
+	min-height: 450px;
+}
+.staff-search{
+	padding-bottom: 50px;
+}
+.staff-pagination{
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.prevButton, .nextButton{
+	font-size: 18px;
+	line-height: 28px;
+	color: #000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.prevButton:hover, .nextButton:hover{
+	text-decoration: underline;;
+}
+#loaderDiv{
+	position: absolute;
+	left: 45%;
+	top: 30vh;
+	width: 75px;
+	height: 75px;
+	z-index: 9999;
+	background: url(/wp-content/uploads/2020/07/loading.gif) center no-repeat #fff;
+	background-size: 75px;
+	background-color: transparent;
+}
+.site-footer{
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+.footer-inner p{
+	margin-bottom: 0px;
+	font-size: 14px;
+}
+.directory-search-left {
+    position: relative;
+    left: -20px;
+	opacity: 0;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    -ms-transition: 1s ease;
+}
+.directory-search-left.moveRight{
+   	left: 0;
+	opacity: 1;
+}
+.directory-search-right {
+    position: relative;
+    right: -20px;
+	opacity: 0;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    -ms-transition: 1s ease;
+}
+.directory-search-right.moveLeft{
+   	right: 0;
+	opacity: 1;
+}
+.logo-text h1 {
+    position: relative;
+    top: -20px;
+	opacity: 0;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    -ms-transition: 1s ease;
+}
+.logo-text h1.moveDown{
+   	top: 0;
+	opacity: 1;
+}
+@media(max-width: 767px){
+	.directory-search-left{
+		float: unset;
+		width: 100%;
+		clear: both;
+	}
+	.directory-search-right{
+		float: unset;
+		width: 100%;
+		clear: both;
+		margin: 0 auto;
+	}
+	#key-word{
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.staff-img{
+		display: block;
+		float: unset;
+		clear: both;
+		height: 250px;
+		width: 250px;
+		margin: 15px auto;
+	}
+	.staff-info{
+		display: block;
+		float: unset;
+		clear: both;
+		text-align: center;
+		margin: 0 auto;
+		padding-left: 0px;
+		width: 100%;
+		max-width: 320px;
+	}
+	.staff, .staff-inner{
+		width: 100%;
+		display: block;
+		max-width: 420px;
+		margin: 0 auto;
+	}
+}
