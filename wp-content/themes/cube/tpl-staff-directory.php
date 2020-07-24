@@ -8,20 +8,22 @@
 ?>
 	<div class="staff-search">
 		<div class="page-container">
-			<div class="directory-search-left">
-				<input type="text" name="keyword" id="key-word" placeholder="Key Words" value="">
-				<i class="fas fa-search"></i>
-			</div>
-			<div class="directory-search-right">
-				<select id="dept" class="dept" name="department">
-					<?php $terms = get_terms('department', array('hide_empty' => false)); ?>
-					<?php if($terms && !is_wp_error( $terms )): ?>
-						<option value="">Select Department</option>
-						<?php foreach ( $terms as $term ): ?>
-							<option value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
-						<?php endforeach; ?>
-					<?php endif; ?>
-				</select>
+			<div class="directory-search"> 
+				<div class="directory-search-left">
+					<input type="text" name="keyword" id="key-word" placeholder="Key Words" value="">
+					<i class="fas fa-search"></i>
+				</div>
+				<div class="directory-search-right">
+					<select id="dept" class="dept" name="department">
+						<?php $terms = get_terms('department', array('hide_empty' => false)); ?>
+						<?php if($terms && !is_wp_error( $terms )): ?>
+							<option value="">Select Department</option>
+							<?php foreach ( $terms as $term ): ?>
+								<option value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
+							<?php endforeach; ?>
+						<?php endif; ?>
+					</select>
+				</div>
 			</div>
 			<div class="staff-lists-outter">
 				<div class="staff-lists">
